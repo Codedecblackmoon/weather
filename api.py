@@ -12,18 +12,13 @@ def api(city_name):
 def get():
     city = input("Enter a city: ")
     return city
-
+    
 def table_format(api, name):
     info = datetime.datetime.now()
     date = str(info).split()
     start_datetime = datetime.datetime.strptime(str(info), '%Y-%m-%d %H:%M:%S.%f')
     day = start_datetime.strftime('%A')
-
     cloud = api['weather'][0]['description']
-    # temp_min = api['main']['temp_min']
-    
-    
-    
     
     time = date[1].split(".")
     temp_max = api['main']['temp_max']
@@ -40,6 +35,3 @@ if __name__ == "__main__":
     name =get()
     apis = api(name)
     table_format(apis, name)
-    
-    
-
