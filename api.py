@@ -25,6 +25,7 @@ def table_format(api, name):
     tn = round(18543/int(temp_max))
     tx = round(5179/int(temp_max))
     icon = api['weather'][0]['icon']
+    # kkkk
     
     table = PrettyTable()
     table.field_names = ["City", "Day", "Date", "Time", "Cloud", "Temp °F", "Temp °C", "Icon"]
