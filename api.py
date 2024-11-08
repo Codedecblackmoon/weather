@@ -8,7 +8,6 @@ def api(city_name):
     key = '7f628240c7ecf2c3259ea4a64034d24a'
     url = api_url + "appid=" + key + "&q=" + city_name
     return requests.get(url).json()
-    # jjjj|?
     
 def get():
     city = input("Enter a city: ")
