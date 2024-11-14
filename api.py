@@ -13,8 +13,6 @@ def get():
     city = input("Enter a city: ")
     return city
 
-# fgbnnnn
-    
 def table_format(api, name):
     info = datetime.datetime.now()
     date = str(info).split()
