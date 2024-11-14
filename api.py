@@ -12,6 +12,8 @@ def api(city_name):
 def get():
     city = input("Enter a city: ")
     return city
+
+fgbnnnn
     
 def table_format(api, name):
     info = datetime.datetime.now()
