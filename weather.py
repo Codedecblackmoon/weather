@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 import requests
 import datetime
 from prettytable import PrettyTable
+import sys
 
 def api(city_name):
     api_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -9,7 +11,10 @@ def api(city_name):
     return requests.get(url).json()
     
 def get():
-    city = input("Enter a city: ")
+    if len(sys.argv) > 1:
+        city = " ".join(sys.argv[1:])
+    else:
+        city = input("Enter a city: ")
     return city
 
 def table_format(api, name):
